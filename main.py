@@ -1,16 +1,9 @@
-# This is a sample Python script.
+import math
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def obtener_digitos_pi(cantidad):
+    pi_str = str(math.pi)  # Convertir π a cadena
+    return pi_str[:cantidad+2]  # Se suma 2 para incluir "3."
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    cantidad_digitos = int(input("Ingrese la cantidad de dígitos de π que desea ver: "))
+    print(f'Los primeros {cantidad_digitos} dígitos de π son: {obtener_digitos_pi(cantidad_digitos)}')
